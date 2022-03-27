@@ -1,0 +1,33 @@
+<template>
+    <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" :class="{ disabled: !pages.has_pre }" @click="pageChange(item -1)">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item" v-for="item in pages.total_pages" :key="'12345'+ item" :class="{ active: item === pages.current_page }" @click.prevent="pageChange(item)">
+      <a class="page-link" href="#">{{item}}</a>
+    </li>
+    <li class="page-item" :class="{ disabled: !pages.has_next }" @click="pageChange(item +1)">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</template>
+
+<script>
+export default {
+  props: ['pages'],
+  methods: {
+    pageChange (item) {
+      this.$emit('page-change', item)
+    }
+  },
+  mounted () {
+    console.log(this.pages)
+  }
+}
+</script>
