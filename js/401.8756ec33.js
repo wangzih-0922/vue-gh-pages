@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_w6_cli"]=self["webpackChunkvue_w6_cli"]||[]).push([[401],{401:function(e,n,t){t.r(n),t.d(n,{default:function(){return f}});var c=t(6252);const r={class:"text-center mt-3"};function u(e,n){return(0,c.wg)(),(0,c.iD)("h2",r,"首頁")}var s=t(3744);const a={},i=(0,s.Z)(a,[["render",u]]);var f=i}}]);
+//# sourceMappingURL=401.8756ec33.js.map
